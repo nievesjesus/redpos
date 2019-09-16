@@ -9,11 +9,27 @@
 /* Begin PBXBuildFile section */
 		0F5D4A6B232FCA6600D205AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A6A232FCA6600D205AB /* AppDelegate.swift */; };
 		0F5D4A6D232FCA6600D205AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A6C232FCA6600D205AB /* ViewController.swift */; };
-		0F5D4A70232FCA6600D205AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5D4A6E232FCA6600D205AB /* Main.storyboard */; };
 		0F5D4A72232FCA6B00D205AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5D4A71232FCA6A00D205AB /* Assets.xcassets */; };
 		0F5D4A75232FCA6B00D205AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5D4A73232FCA6B00D205AB /* LaunchScreen.storyboard */; };
 		0F5D4A80232FCA6B00D205AB /* RedposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A7F232FCA6B00D205AB /* RedposTests.swift */; };
 		0F5D4A8B232FCA6B00D205AB /* RedposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A8A232FCA6B00D205AB /* RedposUITests.swift */; };
+		0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */; };
+		0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF61E232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.m */; };
+		0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF620232FD16800AA2A50 /* ALView+PureLayout.m */; };
+		0F9BF627232FD16A00AA2A50 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF621232FD16900AA2A50 /* NSArray+PureLayout.m */; };
+		0F9BF632232FD2DE00AA2A50 /* RDPHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF631232FD2DE00AA2A50 /* RDPHomeView.swift */; };
+		0F9BF634232FD2F000AA2A50 /* RDPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF633232FD2F000AA2A50 /* RDPHomeViewController.swift */; };
+		0F9BF636232FD2FD00AA2A50 /* RDPHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF635232FD2FD00AA2A50 /* RDPHomePresenter.swift */; };
+		0F9BF638232FD31500AA2A50 /* RDPDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF637232FD31500AA2A50 /* RDPDetailPresenter.swift */; };
+		0F9BF63A232FD32300AA2A50 /* RDPDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF639232FD32300AA2A50 /* RDPDetailViewController.swift */; };
+		0F9BF63C232FD33000AA2A50 /* RDPDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF63B232FD33000AA2A50 /* RDPDetailView.swift */; };
+		0F9BF63F232FD3AF00AA2A50 /* RDPViewSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF63E232FD3AF00AA2A50 /* RDPViewSetupable.swift */; };
+		0F9BF642232FD48900AA2A50 /* RMDHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF641232FD48900AA2A50 /* RMDHomeTableViewCell.swift */; };
+		0F9BF645232FD50400AA2A50 /* RDPUITableview+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF644232FD50400AA2A50 /* RDPUITableview+Extension.swift */; };
+		0F9BF647232FD55A00AA2A50 /* RDPBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF646232FD55A00AA2A50 /* RDPBaseViewController.swift */; };
+		0F9BF64B232FD5AF00AA2A50 /* RDPErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF64A232FD5AF00AA2A50 /* RDPErrorView.swift */; };
+		0F9BF650232FD62E00AA2A50 /* RDPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF64F232FD62E00AA2A50 /* RDPCoordinator.swift */; };
+		0F9BF652232FD65200AA2A50 /* RDPAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF651232FD65200AA2A50 /* RDPAppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +53,6 @@
 		0F5D4A67232FCA6600D205AB /* Redpos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redpos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5D4A6A232FCA6600D205AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F5D4A6C232FCA6600D205AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F5D4A6F232FCA6600D205AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F5D4A71232FCA6A00D205AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F5D4A74232FCA6B00D205AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F5D4A76232FCA6B00D205AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +62,30 @@
 		0F5D4A86232FCA6B00D205AB /* RedposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5D4A8A232FCA6B00D205AB /* RedposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedposUITests.swift; sourceTree = "<group>"; };
 		0F5D4A8C232FCA6B00D205AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedposRequest.swift; sourceTree = "<group>"; };
+		0F9BF61B232FD16700AA2A50 /* Redpos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redpos-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F9BF61C232FD16800AA2A50 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		0F9BF61D232FD16800AA2A50 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		0F9BF61E232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		0F9BF61F232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		0F9BF620232FD16800AA2A50 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		0F9BF621232FD16900AA2A50 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		0F9BF622232FD16900AA2A50 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		0F9BF623232FD16A00AA2A50 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		0F9BF624232FD16A00AA2A50 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		0F9BF631232FD2DE00AA2A50 /* RDPHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPHomeView.swift; sourceTree = "<group>"; };
+		0F9BF633232FD2F000AA2A50 /* RDPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPHomeViewController.swift; sourceTree = "<group>"; };
+		0F9BF635232FD2FD00AA2A50 /* RDPHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPHomePresenter.swift; sourceTree = "<group>"; };
+		0F9BF637232FD31500AA2A50 /* RDPDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPDetailPresenter.swift; sourceTree = "<group>"; };
+		0F9BF639232FD32300AA2A50 /* RDPDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPDetailViewController.swift; sourceTree = "<group>"; };
+		0F9BF63B232FD33000AA2A50 /* RDPDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPDetailView.swift; sourceTree = "<group>"; };
+		0F9BF63E232FD3AF00AA2A50 /* RDPViewSetupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPViewSetupable.swift; sourceTree = "<group>"; };
+		0F9BF641232FD48900AA2A50 /* RMDHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMDHomeTableViewCell.swift; sourceTree = "<group>"; };
+		0F9BF644232FD50400AA2A50 /* RDPUITableview+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUITableview+Extension.swift"; sourceTree = "<group>"; };
+		0F9BF646232FD55A00AA2A50 /* RDPBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPBaseViewController.swift; sourceTree = "<group>"; };
+		0F9BF64A232FD5AF00AA2A50 /* RDPErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPErrorView.swift; sourceTree = "<group>"; };
+		0F9BF64F232FD62E00AA2A50 /* RDPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPCoordinator.swift; sourceTree = "<group>"; };
+		0F9BF651232FD65200AA2A50 /* RDPAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPAppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +136,10 @@
 		0F5D4A69232FCA6600D205AB /* Redpos */ = {
 			isa = PBXGroup;
 			children = (
+				0F9BF628232FD24200AA2A50 /* App */,
+				0F9BF616232FD07B00AA2A50 /* Helpers */,
 				0F5D4A6A232FCA6600D205AB /* AppDelegate.swift */,
 				0F5D4A6C232FCA6600D205AB /* ViewController.swift */,
-				0F5D4A6E232FCA6600D205AB /* Main.storyboard */,
 				0F5D4A71232FCA6A00D205AB /* Assets.xcassets */,
 				0F5D4A73232FCA6B00D205AB /* LaunchScreen.storyboard */,
 				0F5D4A76232FCA6B00D205AB /* Info.plist */,
@@ -123,6 +163,172 @@
 				0F5D4A8C232FCA6B00D205AB /* Info.plist */,
 			);
 			path = RedposUITests;
+			sourceTree = "<group>";
+		};
+		0F9BF616232FD07B00AA2A50 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF64E232FD60B00AA2A50 /* Coordinator */,
+				0F9BF643232FD4F000AA2A50 /* Extensions */,
+				0F9BF63D232FD38300AA2A50 /* Utils */,
+				0F9BF61A232FD15200AA2A50 /* PureLayout */,
+				0F9BF617232FD0B000AA2A50 /* Restclient */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0F9BF617232FD0B000AA2A50 /* Restclient */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */,
+			);
+			path = Restclient;
+			sourceTree = "<group>";
+		};
+		0F9BF61A232FD15200AA2A50 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF622232FD16900AA2A50 /* ALView+PureLayout.h */,
+				0F9BF620232FD16800AA2A50 /* ALView+PureLayout.m */,
+				0F9BF61D232FD16800AA2A50 /* NSArray+PureLayout.h */,
+				0F9BF621232FD16900AA2A50 /* NSArray+PureLayout.m */,
+				0F9BF61F232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.h */,
+				0F9BF61E232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.m */,
+				0F9BF623232FD16A00AA2A50 /* PureLayout.h */,
+				0F9BF61C232FD16800AA2A50 /* PureLayout+Internal.h */,
+				0F9BF624232FD16A00AA2A50 /* PureLayoutDefines.h */,
+				0F9BF61B232FD16700AA2A50 /* Redpos-Bridging-Header.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		0F9BF628232FD24200AA2A50 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF648232FD59A00AA2A50 /* Error */,
+				0F9BF62A232FD24F00AA2A50 /* Detail */,
+				0F9BF629232FD24B00AA2A50 /* Home */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0F9BF629232FD24B00AA2A50 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF630232FD2B100AA2A50 /* Presenter */,
+				0F9BF62E232FD26A00AA2A50 /* Controller */,
+				0F9BF62C232FD26100AA2A50 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0F9BF62A232FD24F00AA2A50 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF62F232FD2AC00AA2A50 /* Presenter */,
+				0F9BF62D232FD26500AA2A50 /* Controller */,
+				0F9BF62B232FD25D00AA2A50 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0F9BF62B232FD25D00AA2A50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF63B232FD33000AA2A50 /* RDPDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F9BF62C232FD26100AA2A50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF640232FD46000AA2A50 /* Cell */,
+				0F9BF631232FD2DE00AA2A50 /* RDPHomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F9BF62D232FD26500AA2A50 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF639232FD32300AA2A50 /* RDPDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0F9BF62E232FD26A00AA2A50 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF633232FD2F000AA2A50 /* RDPHomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0F9BF62F232FD2AC00AA2A50 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF637232FD31500AA2A50 /* RDPDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0F9BF630232FD2B100AA2A50 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF635232FD2FD00AA2A50 /* RDPHomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0F9BF63D232FD38300AA2A50 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF63E232FD3AF00AA2A50 /* RDPViewSetupable.swift */,
+				0F9BF646232FD55A00AA2A50 /* RDPBaseViewController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0F9BF640232FD46000AA2A50 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF641232FD48900AA2A50 /* RMDHomeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0F9BF643232FD4F000AA2A50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF644232FD50400AA2A50 /* RDPUITableview+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0F9BF648232FD59A00AA2A50 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF649232FD59F00AA2A50 /* View */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		0F9BF649232FD59F00AA2A50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF64A232FD5AF00AA2A50 /* RDPErrorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F9BF64E232FD60B00AA2A50 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF64F232FD62E00AA2A50 /* RDPCoordinator.swift */,
+				0F9BF651232FD65200AA2A50 /* RDPAppCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +399,7 @@
 				TargetAttributes = {
 					0F5D4A66232FCA6600D205AB = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					0F5D4A7A232FCA6B00D205AB = {
 						CreatedOnToolsVersion = 10.3;
@@ -231,7 +438,6 @@
 			files = (
 				0F5D4A75232FCA6B00D205AB /* LaunchScreen.storyboard in Resources */,
 				0F5D4A72232FCA6B00D205AB /* Assets.xcassets in Resources */,
-				0F5D4A70232FCA6600D205AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +462,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F9BF645232FD50400AA2A50 /* RDPUITableview+Extension.swift in Sources */,
+				0F9BF64B232FD5AF00AA2A50 /* RDPErrorView.swift in Sources */,
+				0F9BF632232FD2DE00AA2A50 /* RDPHomeView.swift in Sources */,
+				0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */,
+				0F9BF63C232FD33000AA2A50 /* RDPDetailView.swift in Sources */,
+				0F9BF650232FD62E00AA2A50 /* RDPCoordinator.swift in Sources */,
+				0F9BF638232FD31500AA2A50 /* RDPDetailPresenter.swift in Sources */,
+				0F9BF642232FD48900AA2A50 /* RMDHomeTableViewCell.swift in Sources */,
+				0F9BF647232FD55A00AA2A50 /* RDPBaseViewController.swift in Sources */,
+				0F9BF636232FD2FD00AA2A50 /* RDPHomePresenter.swift in Sources */,
 				0F5D4A6D232FCA6600D205AB /* ViewController.swift in Sources */,
 				0F5D4A6B232FCA6600D205AB /* AppDelegate.swift in Sources */,
+				0F9BF634232FD2F000AA2A50 /* RDPHomeViewController.swift in Sources */,
+				0F9BF63A232FD32300AA2A50 /* RDPDetailViewController.swift in Sources */,
+				0F9BF652232FD65200AA2A50 /* RDPAppCoordinator.swift in Sources */,
+				0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */,
+				0F9BF627232FD16A00AA2A50 /* NSArray+PureLayout.m in Sources */,
+				0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				0F9BF63F232FD3AF00AA2A50 /* RDPViewSetupable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +516,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0F5D4A6E232FCA6600D205AB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F5D4A6F232FCA6600D205AB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0F5D4A73232FCA6B00D205AB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,15 +647,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55FJ7WJ6NB;
 				INFOPLIST_FILE = Redpos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nievesjesus.Redpos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Redpos/Helpers/PureLayout/Redpos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,15 +669,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55FJ7WJ6NB;
 				INFOPLIST_FILE = Redpos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nievesjesus.Redpos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Redpos/Helpers/PureLayout/Redpos-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
