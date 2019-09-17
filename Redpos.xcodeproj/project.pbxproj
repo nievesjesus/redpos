@@ -46,6 +46,7 @@
 		0F9BF652232FD65200AA2A50 /* RDPAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF651232FD65200AA2A50 /* RDPAppCoordinator.swift */; };
 		57ED25D62331110F00A33830 /* RedosNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED25D52331110F00A33830 /* RedosNetworking.swift */; };
 		57ED25D82331115300A33830 /* RDPUIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED25D72331115300A33830 /* RDPUIImageView+Extension.swift */; };
+		57ED25DA2331160600A33830 /* RDPDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED25D92331160600A33830 /* RDPDate+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		0F9BF651232FD65200AA2A50 /* RDPAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPAppCoordinator.swift; sourceTree = "<group>"; };
 		57ED25D52331110F00A33830 /* RedosNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedosNetworking.swift; sourceTree = "<group>"; };
 		57ED25D72331115300A33830 /* RDPUIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIImageView+Extension.swift"; sourceTree = "<group>"; };
+		57ED25D92331160600A33830 /* RDPDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPDate+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +392,7 @@
 				0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */,
 				0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */,
 				57ED25D72331115300A33830 /* RDPUIImageView+Extension.swift */,
+				57ED25D92331160600A33830 /* RDPDate+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				0F9BF652232FD65200AA2A50 /* RDPAppCoordinator.swift in Sources */,
 				0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */,
 				0F9BF627232FD16A00AA2A50 /* NSArray+PureLayout.m in Sources */,
+				57ED25DA2331160600A33830 /* RDPDate+Extension.swift in Sources */,
 				0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				0F722FCD23306A1900ED810C /* RDPUIColor+Extension.swift in Sources */,
 				57ED25D82331115300A33830 /* RDPUIImageView+Extension.swift in Sources */,

@@ -28,6 +28,11 @@ class RMDHomeTableViewCell: UITableViewCell {
             if let thumbnail = model?.data.thumbnail {
                 self.postThumbImageView.loadThumbnail(urlSting: thumbnail)
             }
+            
+            if let created = model?.data.createdUtc {
+                let date = Date(timeIntervalSince1970: created)
+                self.timeLabel.text = "\(date.timeAgo()) ago"
+            }
         }
     }
 
