@@ -10,7 +10,7 @@ import UIKit
 
 class RDPBaseViewController: UIViewController {
 
-    var errorView: RDPErrorView?
+    let errorView: RDPErrorView = RDPErrorView()
     weak var coordinator: RDPAppCoordinator?
 
     override func viewDidLoad() {

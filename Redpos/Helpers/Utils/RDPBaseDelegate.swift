@@ -14,10 +14,9 @@ protocol RDPBaseDelegate: class {
 extension RDPBaseDelegate where Self: RDPBaseViewController {
 
     func showError() {
-        self.errorView?.removeFromSuperview()
+        self.errorView.removeFromSuperview()
         DispatchQueue.main.async { [weak self] in
             self?.onRetry()
-            self?.errorView = RDPErrorView()
             if let view = self?.view, let errorView = self?.errorView {
                 view.addSubview(errorView)
                 errorView.autoPinEdgesToSuperviewEdges()

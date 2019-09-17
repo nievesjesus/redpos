@@ -38,6 +38,7 @@ class RDPErrorView: UIView {
         button.autoSetDimension(.height, toSize: 50.0)
         button.layer.cornerRadius = 25.0
         button.setTitle("Retry", for: .normal)
+        button.addTarget(self, action: #selector(self.retryPressed), for: .touchUpInside)
         return button
     }()
 
@@ -98,7 +99,7 @@ extension RDPErrorView: RDPViewSetupable {
 extension RDPErrorView {
 
     @objc func retryPressed () {
-        guard let callback = onRetryPressed else { return }
+        guard let callback = self.onRetryPressed else { return }
         self.removeFromSuperview()
         callback()
     }

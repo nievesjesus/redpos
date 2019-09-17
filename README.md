@@ -37,7 +37,7 @@ Due to the short time to develop the demo appp in this first stage a hybrid prog
 
 ### Preview 
 
-![preview](https://user-images.githubusercontent.com/2607274/65066915-b72de380-d95b-11e9-9ba1-ce32385cd6f6.gif)
+![preview-final](https://user-images.githubusercontent.com/2607274/65069515-340f8c00-d961-11e9-8569-e915a6a46a7a.gif)
 
 License
 ----
