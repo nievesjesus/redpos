@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+# Redpos
 
-You can use the [editor on GitHub](https://github.com/nievesjesus/redpos/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+![top](https://user-images.githubusercontent.com/2607274/65064663-48e72200-d957-11e9-97d8-08e6dd9ee042.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+# What is redpos
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Redpos is a test app to evaluate the use of an MVP design pattern with a Coordinator and the implementation of native tasks in ios.
 
-```markdown
-Syntax highlighted code block
+For this, a methodology was created for the creation of the connection class that will work to solve all the main needs and also that it was compatible with different design and development patterns such as ReactiveDevelopment, MVVM, MVCN among others.
 
-# Header 1
-## Header 2
-### Header 3
+### External library
 
-- Bulleted
-- List
+Redpos and this project in general use different OpenSource libraries to work correctly:
 
-1. Numbered
-2. List
+* [PureLayout](https://github.com/PureLayout/PureLayout) - PureLayout provides a fully capable and developer-friendly interface for Auto Layout. It is designed for clarity and simplicity, and takes inspiration from the AutoLayout UI options available in Interface Builder while delivering far more flexibility.
 
-**Bold** and _Italic_ and `Code` text
+Other tools and technologies used to carry out this project and that do not have to do directly with the code, such as resources, web, video, etc.
 
-[Link](url) and ![Image](src)
-```
+* [Adobe XD](https://www.adobe.com/la/products/xd.html) - Used to create the user interface and export the necessary resources.
+* [Photoshop](https://www.adobe.com/products/photoshop.html) - It was used to edit and adjust the images and resources of the application.
+* [Visual Studio Code](https://code.visualstudio.com/) - It was used to create the Redpos readme.
+* [Flaticon](https://www.flaticon.com/) - Main source for the icons within the application.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### Installation
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nievesjesus/redpos/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+You just have to open Redpos.xcodeproj and run
 
-### Support or Contact
+### Compile and test
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Now run the application on the emulator or a physical device and try how easy it is to use Redpos. This app is adjusted for small and large devices, has been adjusted for iPhone SE and all subsequent devices (included iPad).
+
+### Curiosities; type of programming
+
+Due to the short time to develop the demo appp in this first stage a hybrid programming pattern between MVP and MVPC is implemented, to achieve a more persistent navigation flow, the app use and app coordinator.
+
+
+### Preview 
+
+![preview](https://user-images.githubusercontent.com/2607274/65066481-ceb89c80-d95a-11e9-984f-1bfc95e29dd2.png)
+
+License
+----
+
+MIT
+
