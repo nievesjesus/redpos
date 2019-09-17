@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F5D4A6B232FCA6600D205AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A6A232FCA6600D205AB /* AppDelegate.swift */; };
-		0F5D4A6D232FCA6600D205AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A6C232FCA6600D205AB /* ViewController.swift */; };
 		0F5D4A72232FCA6B00D205AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5D4A71232FCA6A00D205AB /* Assets.xcassets */; };
 		0F5D4A75232FCA6B00D205AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5D4A73232FCA6B00D205AB /* LaunchScreen.storyboard */; };
 		0F5D4A80232FCA6B00D205AB /* RedposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A7F232FCA6B00D205AB /* RedposTests.swift */; };
@@ -25,6 +24,7 @@
 		0F722FCD23306A1900ED810C /* RDPUIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */; };
 		0F722FCF23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */; };
 		0F722FD5233086A500ED810C /* RDPUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */; };
+		0F722FD9233092E200ED810C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FD8233092E200ED810C /* MasterViewController.swift */; };
 		0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */; };
 		0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF61E232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.m */; };
 		0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF620232FD16800AA2A50 /* ALView+PureLayout.m */; };
@@ -64,7 +64,6 @@
 /* Begin PBXFileReference section */
 		0F5D4A67232FCA6600D205AB /* Redpos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redpos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5D4A6A232FCA6600D205AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F5D4A6C232FCA6600D205AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0F5D4A71232FCA6A00D205AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F5D4A74232FCA6B00D205AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F5D4A76232FCA6B00D205AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIColor+Extension.swift"; sourceTree = "<group>"; };
 		0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIEdgeInsets+Extension.swift"; sourceTree = "<group>"; };
 		0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIView+Extension.swift"; sourceTree = "<group>"; };
+		0F722FD8233092E200ED810C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedposRequest.swift; sourceTree = "<group>"; };
 		0F9BF61B232FD16700AA2A50 /* Redpos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redpos-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F9BF61C232FD16800AA2A50 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
@@ -164,7 +164,6 @@
 				0F9BF628232FD24200AA2A50 /* App */,
 				0F9BF616232FD07B00AA2A50 /* Helpers */,
 				0F5D4A6A232FCA6600D205AB /* AppDelegate.swift */,
-				0F5D4A6C232FCA6600D205AB /* ViewController.swift */,
 				0F5D4A73232FCA6B00D205AB /* LaunchScreen.storyboard */,
 				0F5D4A76232FCA6B00D205AB /* Info.plist */,
 			);
@@ -212,6 +211,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0F722FD6233092B500ED810C /* MasterView */ = {
+			isa = PBXGroup;
+			children = (
+				0F722FD7233092CD00ED810C /* Controller */,
+			);
+			path = MasterView;
+			sourceTree = "<group>";
+		};
+		0F722FD7233092CD00ED810C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F722FD8233092E200ED810C /* MasterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		0F9BF616232FD07B00AA2A50 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +267,7 @@
 		0F9BF628232FD24200AA2A50 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0F722FD6233092B500ED810C /* MasterView */,
 				0F9BF648232FD59A00AA2A50 /* Error */,
 				0F9BF62A232FD24F00AA2A50 /* Detail */,
 				0F9BF629232FD24B00AA2A50 /* Home */,
@@ -529,13 +545,13 @@
 				0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */,
 				0F9BF63C232FD33000AA2A50 /* RDPDetailView.swift in Sources */,
 				0F722FCF23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift in Sources */,
+				0F722FD9233092E200ED810C /* MasterViewController.swift in Sources */,
 				0F722FBB233065C100ED810C /* RDPUIFont+Extension.swift in Sources */,
 				0F9BF650232FD62E00AA2A50 /* RDPCoordinator.swift in Sources */,
 				0F9BF638232FD31500AA2A50 /* RDPDetailPresenter.swift in Sources */,
 				0F9BF642232FD48900AA2A50 /* RMDHomeTableViewCell.swift in Sources */,
 				0F9BF647232FD55A00AA2A50 /* RDPBaseViewController.swift in Sources */,
 				0F9BF636232FD2FD00AA2A50 /* RDPHomePresenter.swift in Sources */,
-				0F5D4A6D232FCA6600D205AB /* ViewController.swift in Sources */,
 				0F5D4A6B232FCA6600D205AB /* AppDelegate.swift in Sources */,
 				0F9BF634232FD2F000AA2A50 /* RDPHomeViewController.swift in Sources */,
 				0F9BF63A232FD32300AA2A50 /* RDPDetailViewController.swift in Sources */,

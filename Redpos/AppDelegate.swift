@@ -29,11 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = attrs
         
         let navController = UINavigationController()
-        coordinator = RDPAppCoordinator(navigationController: navController)
+        let splitViewController = UISplitViewController()
+        coordinator = RDPAppCoordinator(splitViewController: splitViewController, navigationController: navController)
         coordinator?.start()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navController
+        window?.rootViewController = splitViewController
         window?.makeKeyAndVisible()
         
         return true

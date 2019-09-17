@@ -90,7 +90,7 @@ class RMDHomeTableViewCell: UITableViewCell {
         label.text = "7 hours ago"
         label.numberOfLines = 0
         label.textColor = RDPStyleManager.Color.regularGray.color()
-        label.font = RDPStyleManager.Font.roman.font(size: .xsmall)
+        label.font = RDPStyleManager.Font.roman.font(size: .tiny)
         return label
     }()
     
@@ -139,7 +139,7 @@ extension RMDHomeTableViewCell: RDPViewSetupable {
         self.descriptionLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
         self.descriptionLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 16, relation: .greaterThanOrEqual)
 
-        self.timeLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 16)
+        self.timeLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 8)
         self.timeLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
         
         self.unreadLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 16)

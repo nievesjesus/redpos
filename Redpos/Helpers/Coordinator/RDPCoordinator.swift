@@ -9,8 +9,8 @@
 import UIKit
 
 protocol RDPCoordinator {
-    var childCoordinators: [RDPCoordinator] { get set }
     var navigationController: UINavigationController { get set }
+    var splitViewController: UISplitViewController { get set }
     
     func start()
 }
