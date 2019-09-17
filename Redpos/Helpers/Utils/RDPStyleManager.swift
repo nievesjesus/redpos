@@ -9,20 +9,19 @@
 import UIKit
 
 enum RDPStyleManager {
-    
+
     enum Color: String {
         case main = "#FF003C"
         case regularGray = "#6A6A6A"
         case softGray = "#D8D8D8"
         case bluePurple = "#080040"
         case softBlue = "#2CC2DC"
-        
+
         func color() -> UIColor {
             return UIColor(hex: self.rawValue)
         }
     }
 
-    
     enum Font {
         enum Size: CGFloat {
             case large = 20
@@ -31,7 +30,7 @@ enum RDPStyleManager {
             case xsmall = 13
             case tiny = 10
         }
-        
+
         case light
         case black
         case book
@@ -39,10 +38,10 @@ enum RDPStyleManager {
         case medium
         case oblique
         case roman
-        
+
         func font(size: Size) -> UIFont {
             let fontSize = size.rawValue
-            
+
             switch self {
             case .light:
                 return UIFont.lightFont(ofSize: fontSize)
@@ -61,6 +60,5 @@ enum RDPStyleManager {
             }
         }
     }
-    
-}
 
+}

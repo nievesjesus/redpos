@@ -9,10 +9,10 @@
 import Foundation
 
 class RDPHomePresenter {
-    
+
     private var delegate: HomeDelegate
     private var postsList: [PostModel]?
-    
+
     init(delegate: HomeDelegate) {
         self.delegate = delegate
     }
@@ -23,16 +23,15 @@ class RDPHomePresenter {
             self.delegate.willBuildPostList()
         }
     }
-    
-    func getNumberOfRows () -> Int{
+
+    func getNumberOfRows () -> Int {
         return self.postsList?.count ?? 0
     }
-    
-    
+
     func getRowAt(_ indexPath: Int) -> PostModel? {
         return self.postsList?[indexPath]
     }
-    
+
     func setReaded(_ indexPath: Int) {
         self.postsList?[indexPath].data.readed = true
         self.delegate.willBuildPostList()

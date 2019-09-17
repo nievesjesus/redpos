@@ -9,9 +9,9 @@
 import UIKit
 
 class RDPDetailViewController: RDPBaseViewController {
-    
+
     let detailView = RDPDetailView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -20,12 +20,12 @@ class RDPDetailViewController: RDPBaseViewController {
 }
 
 extension RDPDetailViewController: RDPViewSetupable {
-    
-    func setupView (){
+
+    func setupView () {
         self.view.addSubview(self.detailView)
     }
-    
-    func setupConstraints(){
+
+    func setupConstraints() {
         self.detailView.autoPinEdgesToSuperviewEdges()
     }
 }

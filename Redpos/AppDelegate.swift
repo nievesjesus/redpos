@@ -15,28 +15,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: RDPAppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = false
         UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barTintColor = RDPStyleManager.Color.main.color()
         UINavigationBar.appearance().tintColor = .white
-        
+
         let attrs = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: RDPStyleManager.Font.medium.font(size: .large)
         ]
         UINavigationBar.appearance().titleTextAttributes = attrs
-        
+
         let navController = UINavigationController()
         let splitViewController = UISplitViewController()
         coordinator = RDPAppCoordinator(splitViewController: splitViewController, navigationController: navController)
         coordinator?.start()
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = splitViewController
         window?.makeKeyAndVisible()
-        
+
         return true
     }
 
@@ -62,6 +62,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

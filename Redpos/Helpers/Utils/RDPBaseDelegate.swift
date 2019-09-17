@@ -11,7 +11,6 @@ protocol RDPBaseDelegate {
     func onRetry()
 }
 
-
 extension RDPBaseDelegate where Self: RDPBaseViewController {
 
     func showError() {
@@ -26,5 +25,5 @@ extension RDPBaseDelegate where Self: RDPBaseViewController {
         }
         return
     }
-    
+
 }

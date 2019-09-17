@@ -11,11 +11,11 @@ import UIKit
 let imageCache = NSCache<AnyObject, AnyObject>()
 
 extension UIImageView {
-    
+
     func loadThumbnail(urlSting: String) {
         guard let url = URL(string: urlSting) else { return }
         image = nil
-        
+
         if let imageFromCache = imageCache.object(forKey: urlSting as AnyObject) {
             image = imageFromCache as? UIImage
             return
@@ -27,7 +27,7 @@ extension UIImageView {
                 guard let imageToCache = UIImage(data: data) else { return }
                 imageCache.setObject(imageToCache, forKey: urlSting as AnyObject)
                 self.image = UIImage(data: data)
-            case .failure(_):
+            case .failure:
                 self.image = UIImage(named: "no-image")
             }
         }

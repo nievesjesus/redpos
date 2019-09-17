@@ -9,16 +9,15 @@
 import Foundation
 
 struct RedposRequest<Model: Codable> {
-    
 
     typealias SuccessCompletionHandler = (_ response: Model) -> Void
-    
+
     static func request(path: String, delegate: RDPBaseDelegate, url: String, success successCallback: @escaping SuccessCompletionHandler) {
-        
+
         var dataTask: URLSessionDataTask?
         let defaultSession = URLSession(configuration: .default)
         dataTask?.cancel()
-        
+
         if var urlComponents = URLComponents(string: url) {
             guard let url = urlComponents.url else {
                 return
@@ -32,13 +31,13 @@ struct RedposRequest<Model: Codable> {
                     if let error = error {
                         delegate.showError()
                     } else if
-                        
+
                         let data = data,
                         let response = response as? HTTPURLResponse,
                         response.statusCode == 200 {
                             do {
                                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
-                                
+
                                 if let dictAtPath = json?.value(forKeyPath: path) {
                                     let jsonData = try JSONSerialization.data(withJSONObject: dictAtPath, options: .prettyPrinted)
                                     let decoder = JSONDecoder()
@@ -58,4 +57,3 @@ struct RedposRequest<Model: Codable> {
         }
     }
 }
-

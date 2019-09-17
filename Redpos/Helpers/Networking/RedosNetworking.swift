@@ -14,26 +14,26 @@ public enum Result<T> {
 }
 
 final class RedosNetworking: NSObject {
-    
+
     private static func getData(url: URL,
-                                completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+                                completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
-    
+
     public static func downloadImage(url: URL,
                                      completion: @escaping (Result<Data>) -> Void) {
-        RedosNetworking.getData(url: url) { data, response, error in
-            
+        RedosNetworking.getData(url: url) { data, _, error in
+
             if let error = error {
                 completion(.failure(error))
                 return
             }
-            
+
             guard let data = data, error == nil else {
                 return
             }
-            
-            DispatchQueue.main.async() {
+
+            DispatchQueue.main.async {
                 completion(.success(data))
             }
         }

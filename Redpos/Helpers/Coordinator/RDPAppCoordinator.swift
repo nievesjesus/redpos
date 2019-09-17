@@ -11,29 +11,29 @@ import UIKit
 class RDPAppCoordinator: RDPCoordinator {
     var splitViewController: UISplitViewController
     var navigationController: UINavigationController
-    
+
     init(splitViewController: UISplitViewController, navigationController: UINavigationController) {
         self.splitViewController = splitViewController
         self.navigationController = navigationController
     }
-    
+
     func start() {
-        self.splitViewController.viewControllers = [self.navigationController,RDPDetailViewController()]
-        
+        self.splitViewController.viewControllers = [self.navigationController, RDPDetailViewController()]
+
         let homeViewController = RDPHomeViewController()
         homeViewController.coordinator = self
         self.navigationController.viewControllers = [homeViewController]
-        
+
         let detailViewcontroller = RDPDetailViewController()
         detailViewcontroller.coordinator = self
-        
-        self.splitViewController.viewControllers = [self.navigationController,detailViewcontroller]
+
+        self.splitViewController.viewControllers = [self.navigationController, detailViewcontroller]
         self.splitViewController.preferredDisplayMode = .primaryOverlay
         self.splitViewController.preferredDisplayMode = .allVisible
         self.splitViewController.delegate = self
     }
-    
-    func goToDetail(){
+
+    func goToDetail() {
         let viewController = RDPDetailViewController()
         viewController.coordinator = self
         self.splitViewController.showDetailViewController(viewController, sender: nil)

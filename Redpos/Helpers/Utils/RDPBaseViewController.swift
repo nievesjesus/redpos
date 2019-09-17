@@ -9,7 +9,7 @@
 import UIKit
 
 class RDPBaseViewController: UIViewController {
-    
+
     var errorView: RDPErrorView?
     weak var coordinator: RDPAppCoordinator?
 

@@ -23,4 +23,3 @@ struct DataModel: Codable {
 protocol HomeDelegate: RDPBaseDelegate {
     func willBuildPostList()
 }
-
