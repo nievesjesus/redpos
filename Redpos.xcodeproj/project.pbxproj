@@ -13,6 +13,17 @@
 		0F5D4A75232FCA6B00D205AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F5D4A73232FCA6B00D205AB /* LaunchScreen.storyboard */; };
 		0F5D4A80232FCA6B00D205AB /* RedposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A7F232FCA6B00D205AB /* RedposTests.swift */; };
 		0F5D4A8B232FCA6B00D205AB /* RedposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D4A8A232FCA6B00D205AB /* RedposUITests.swift */; };
+		0F722FB92330657300ED810C /* RDPStyleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FB82330657300ED810C /* RDPStyleManager.swift */; };
+		0F722FBB233065C100ED810C /* RDPUIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FBA233065C100ED810C /* RDPUIFont+Extension.swift */; };
+		0F722FC5233066E900ED810C /* AvenirLTStd-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FBE233066E700ED810C /* AvenirLTStd-Oblique.otf */; };
+		0F722FC6233066E900ED810C /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FBF233066E800ED810C /* AvenirLTStd-Black.otf */; };
+		0F722FC7233066E900ED810C /* AvenirLTStd-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FC0233066E800ED810C /* AvenirLTStd-Heavy.otf */; };
+		0F722FC8233066E900ED810C /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FC1233066E800ED810C /* AvenirLTStd-Roman.otf */; };
+		0F722FC9233066E900ED810C /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FC2233066E800ED810C /* AvenirLTStd-Book.otf */; };
+		0F722FCA233066E900ED810C /* AvenirLTStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FC3233066E900ED810C /* AvenirLTStd-Light.otf */; };
+		0F722FCB233066E900ED810C /* AvenirLTStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FC4233066E900ED810C /* AvenirLTStd-Medium.otf */; };
+		0F722FCD23306A1900ED810C /* RDPUIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */; };
+		0F722FCF23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */; };
 		0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */; };
 		0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF61E232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.m */; };
 		0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF620232FD16800AA2A50 /* ALView+PureLayout.m */; };
@@ -62,6 +73,17 @@
 		0F5D4A86232FCA6B00D205AB /* RedposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5D4A8A232FCA6B00D205AB /* RedposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedposUITests.swift; sourceTree = "<group>"; };
 		0F5D4A8C232FCA6B00D205AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F722FB82330657300ED810C /* RDPStyleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPStyleManager.swift; sourceTree = "<group>"; };
+		0F722FBA233065C100ED810C /* RDPUIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIFont+Extension.swift"; sourceTree = "<group>"; };
+		0F722FBE233066E700ED810C /* AvenirLTStd-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Oblique.otf"; sourceTree = "<group>"; };
+		0F722FBF233066E800ED810C /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
+		0F722FC0233066E800ED810C /* AvenirLTStd-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Heavy.otf"; sourceTree = "<group>"; };
+		0F722FC1233066E800ED810C /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
+		0F722FC2233066E800ED810C /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
+		0F722FC3233066E900ED810C /* AvenirLTStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Light.otf"; sourceTree = "<group>"; };
+		0F722FC4233066E900ED810C /* AvenirLTStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Medium.otf"; sourceTree = "<group>"; };
+		0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIColor+Extension.swift"; sourceTree = "<group>"; };
+		0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIEdgeInsets+Extension.swift"; sourceTree = "<group>"; };
 		0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedposRequest.swift; sourceTree = "<group>"; };
 		0F9BF61B232FD16700AA2A50 /* Redpos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redpos-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F9BF61C232FD16800AA2A50 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
@@ -136,11 +158,11 @@
 		0F5D4A69232FCA6600D205AB /* Redpos */ = {
 			isa = PBXGroup;
 			children = (
+				0F722FBC233066B200ED810C /* Resources */,
 				0F9BF628232FD24200AA2A50 /* App */,
 				0F9BF616232FD07B00AA2A50 /* Helpers */,
 				0F5D4A6A232FCA6600D205AB /* AppDelegate.swift */,
 				0F5D4A6C232FCA6600D205AB /* ViewController.swift */,
-				0F5D4A71232FCA6A00D205AB /* Assets.xcassets */,
 				0F5D4A73232FCA6B00D205AB /* LaunchScreen.storyboard */,
 				0F5D4A76232FCA6B00D205AB /* Info.plist */,
 			);
@@ -163,6 +185,29 @@
 				0F5D4A8C232FCA6B00D205AB /* Info.plist */,
 			);
 			path = RedposUITests;
+			sourceTree = "<group>";
+		};
+		0F722FBC233066B200ED810C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F5D4A71232FCA6A00D205AB /* Assets.xcassets */,
+				0F722FBD233066B700ED810C /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0F722FBD233066B700ED810C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F722FBF233066E800ED810C /* AvenirLTStd-Black.otf */,
+				0F722FC2233066E800ED810C /* AvenirLTStd-Book.otf */,
+				0F722FC0233066E800ED810C /* AvenirLTStd-Heavy.otf */,
+				0F722FC3233066E900ED810C /* AvenirLTStd-Light.otf */,
+				0F722FC4233066E900ED810C /* AvenirLTStd-Medium.otf */,
+				0F722FBE233066E700ED810C /* AvenirLTStd-Oblique.otf */,
+				0F722FC1233066E800ED810C /* AvenirLTStd-Roman.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		0F9BF616232FD07B00AA2A50 /* Helpers */ = {
@@ -286,6 +331,7 @@
 			children = (
 				0F9BF63E232FD3AF00AA2A50 /* RDPViewSetupable.swift */,
 				0F9BF646232FD55A00AA2A50 /* RDPBaseViewController.swift */,
+				0F722FB82330657300ED810C /* RDPStyleManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -302,6 +348,9 @@
 			isa = PBXGroup;
 			children = (
 				0F9BF644232FD50400AA2A50 /* RDPUITableview+Extension.swift */,
+				0F722FBA233065C100ED810C /* RDPUIFont+Extension.swift */,
+				0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */,
+				0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -436,8 +485,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F722FC7233066E900ED810C /* AvenirLTStd-Heavy.otf in Resources */,
+				0F722FCA233066E900ED810C /* AvenirLTStd-Light.otf in Resources */,
 				0F5D4A75232FCA6B00D205AB /* LaunchScreen.storyboard in Resources */,
+				0F722FC8233066E900ED810C /* AvenirLTStd-Roman.otf in Resources */,
 				0F5D4A72232FCA6B00D205AB /* Assets.xcassets in Resources */,
+				0F722FC9233066E900ED810C /* AvenirLTStd-Book.otf in Resources */,
+				0F722FCB233066E900ED810C /* AvenirLTStd-Medium.otf in Resources */,
+				0F722FC6233066E900ED810C /* AvenirLTStd-Black.otf in Resources */,
+				0F722FC5233066E900ED810C /* AvenirLTStd-Oblique.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,9 +520,12 @@
 			files = (
 				0F9BF645232FD50400AA2A50 /* RDPUITableview+Extension.swift in Sources */,
 				0F9BF64B232FD5AF00AA2A50 /* RDPErrorView.swift in Sources */,
+				0F722FB92330657300ED810C /* RDPStyleManager.swift in Sources */,
 				0F9BF632232FD2DE00AA2A50 /* RDPHomeView.swift in Sources */,
 				0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */,
 				0F9BF63C232FD33000AA2A50 /* RDPDetailView.swift in Sources */,
+				0F722FCF23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift in Sources */,
+				0F722FBB233065C100ED810C /* RDPUIFont+Extension.swift in Sources */,
 				0F9BF650232FD62E00AA2A50 /* RDPCoordinator.swift in Sources */,
 				0F9BF638232FD31500AA2A50 /* RDPDetailPresenter.swift in Sources */,
 				0F9BF642232FD48900AA2A50 /* RMDHomeTableViewCell.swift in Sources */,
@@ -480,6 +539,7 @@
 				0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */,
 				0F9BF627232FD16A00AA2A50 /* NSArray+PureLayout.m in Sources */,
 				0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				0F722FCD23306A1900ED810C /* RDPUIColor+Extension.swift in Sources */,
 				0F9BF63F232FD3AF00AA2A50 /* RDPViewSetupable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

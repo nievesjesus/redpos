@@ -22,6 +22,10 @@ class RDPHomeViewController: RDPBaseViewController {
 
 extension RDPHomeViewController: RDPViewSetupable {
     func setupView() {
+        let image = UIImage(named: "logo-top")?.withRenderingMode(.alwaysOriginal)
+        let logoTop = UIBarButtonItem(image: image, landscapeImagePhone: nil, style: .done, target: self, action: nil)
+        self.navigationItem.leftBarButtonItems = [logoTop   ]
+        
         self.homeView.tableView.delegate = self
         self.homeView.tableView.dataSource = self
         self.view.addSubview(self.homeView)

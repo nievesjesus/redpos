@@ -9,13 +9,90 @@
 import UIKit
 
 class RMDHomeTableViewCell: UITableViewCell {
+
+    private lazy var selectedView: UIView = {
+        let view = UIView.newAutoLayout()
+        view.backgroundColor = RDPStyleManager.Color.softBlue.color().withAlphaComponent(0.5)
+        view.alpha = 0.5
+        return view
+    }()
     
-    private lazy var titleLabel: UILabel = {
+    private lazy var containerView: UIView = {
+        let view = UIView.newAutoLayout()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 8
+        view.clipsToBounds = true
+        return view
+    }()
+
+    private lazy var separatorView: UIView = {
+        let view = UIView.newAutoLayout()
+        view.backgroundColor = RDPStyleManager.Color.softGray.color()
+        view.autoSetDimension(.height, toSize: 1)
+        view.alpha = 0.6
+        return view
+    }()
+
+    private lazy var postThumbImageView: UIImageView = {
+        let imageview = UIImageView.newAutoLayout()
+        imageview.autoSetDimensions(to: CGSize(width: 104, height: 104))
+        imageview.contentMode = .scaleAspectFit
+        imageview.backgroundColor = RDPStyleManager.Color.softGray.color()
+        imageview.layer.cornerRadius = 52;
+        return imageview
+    }()
+    
+
+    private lazy var authorLabel: UILabel = {
         let label = UILabel()
-        label.text = "This is a label"
+        label.text = "Jesus Nieves"
         label.numberOfLines = 0
+        label.textColor = RDPStyleManager.Color.bluePurple.color()
         return label
     }()
+    
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "asdlka sdl kasjdl aksjd laskdj alkdj alskdj alsdkj alskd"
+        label.font = RDPStyleManager.Font.roman.font(size: .xsmall)
+        label.numberOfLines = 0
+        label.textColor = RDPStyleManager.Color.regularGray.color()
+        return label
+    }()
+    
+    private lazy var unreadLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Unreaded"
+        label.font = RDPStyleManager.Font.roman.font(size: .tiny)
+        label.numberOfLines = 0
+        label.backgroundColor = RDPStyleManager.Color.softBlue.color()
+        label.textColor = .white
+        label.textAlignment = .center
+        label.autoSetDimensions(to: CGSize(width: 62, height: 18))
+        label.layer.cornerRadius = 9
+        label.clipsToBounds = true
+        return label
+    }()
+    
+    private lazy var commentsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "5k comments"
+        label.numberOfLines = 0
+        label.textColor = RDPStyleManager.Color.regularGray.color()
+        label.font = RDPStyleManager.Font.roman.font(size: .xsmall)
+        return label
+    }()
+    
+    
+    private lazy var timeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "7 hours ago"
+        label.numberOfLines = 0
+        label.textColor = RDPStyleManager.Color.regularGray.color()
+        label.font = RDPStyleManager.Font.roman.font(size: .xsmall)
+        return label
+    }()
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,18 +103,51 @@ class RMDHomeTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 }
 
 extension RMDHomeTableViewCell: RDPViewSetupable {
     
     func setupView() {
-        self.contentView.addSubview(self.titleLabel)
+        self.selectedBackgroundView = self.selectedView
+        self.contentView.addSubview(self.containerView)
+        self.containerView.addSubview(self.authorLabel)
+        self.containerView.addSubview(self.descriptionLabel)
+        self.containerView.addSubview(self.postThumbImageView)
+        self.containerView.addSubview(self.commentsLabel)
+        self.containerView.addSubview(self.timeLabel)
+        self.containerView.addSubview(self.unreadLabel)
+        self.containerView.addSubview(self.separatorView)
     }
     
+    
     func setupConstraints() {
-        self.titleLabel.autoPinEdgesToSuperviewEdges()
+        self.containerView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(all: 16))
+        self.postThumbImageView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 19, left: 16, bottom: 19, right: 0), excludingEdge: .trailing)
+        
+        self.authorLabel.autoPinEdge(.leading, to: .trailing, of: self.postThumbImageView, withOffset: 12)
+        self.authorLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 23)
+        self.authorLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
+        
+        self.commentsLabel.autoPinEdge(.top, to: .bottom, of: self.authorLabel, withOffset: 2)
+        self.commentsLabel.autoPinEdge(.leading, to: .trailing, of: self.postThumbImageView, withOffset: 12)
+        self.commentsLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
+        
+        self.descriptionLabel.autoPinEdge(.top, to: .bottom, of: self.commentsLabel, withOffset: 8)
+        self.descriptionLabel.autoPinEdge(.leading, to: .trailing, of: self.postThumbImageView, withOffset: 12)
+        self.descriptionLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
+        self.descriptionLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 16, relation: .greaterThanOrEqual)
+
+        self.timeLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 16)
+        self.timeLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
+        
+        self.unreadLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 16)
+        self.unreadLabel.autoPinEdge(toSuperviewEdge: .leading, withInset: 16)
+        
+        self.separatorView.autoPinEdge(toSuperviewEdge: .trailing)
+        self.separatorView.autoPinEdge(toSuperviewEdge: .bottom)
+        self.separatorView.autoPinEdge(toSuperviewEdge: .leading, withInset: 40)
+        
     }
     
 }
-

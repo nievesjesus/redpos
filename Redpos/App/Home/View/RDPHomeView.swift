@@ -36,7 +36,7 @@ class RDPHomeView: UIView {
 extension RDPHomeView: RDPViewSetupable {
     
     func setupView() {
-        self.backgroundColor = .red
+        self.backgroundColor = .white
         self.addSubview(self.tableView)
     }
     

@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().isTranslucent = false
+        UIApplication.shared.statusBarStyle = .lightContent
+        UINavigationBar.appearance().barTintColor = RDPStyleManager.Color.main.color()
+        UINavigationBar.appearance().tintColor = .white
+        
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: RDPStyleManager.Font.medium.font(size: .large)
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attrs
+        
         let navController = UINavigationController()
         coordinator = RDPAppCoordinator(navigationController: navController)
         coordinator?.start()
