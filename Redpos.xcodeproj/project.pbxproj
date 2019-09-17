@@ -25,6 +25,8 @@
 		0F722FCF23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */; };
 		0F722FD5233086A500ED810C /* RDPUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */; };
 		0F722FD9233092E200ED810C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FD8233092E200ED810C /* MasterViewController.swift */; };
+		0F722FE02330F3D900ED810C /* RDPBaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FDF2330F3D900ED810C /* RDPBaseDelegate.swift */; };
+		0F8D061C2330FA15009613F6 /* RDPPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D061B2330FA15009613F6 /* RDPPostModel.swift */; };
 		0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */; };
 		0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF61E232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.m */; };
 		0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF620232FD16800AA2A50 /* ALView+PureLayout.m */; };
@@ -86,6 +88,8 @@
 		0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIEdgeInsets+Extension.swift"; sourceTree = "<group>"; };
 		0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIView+Extension.swift"; sourceTree = "<group>"; };
 		0F722FD8233092E200ED810C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		0F722FDF2330F3D900ED810C /* RDPBaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPBaseDelegate.swift; sourceTree = "<group>"; };
+		0F8D061B2330FA15009613F6 /* RDPPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDPPostModel.swift; sourceTree = "<group>"; };
 		0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedposRequest.swift; sourceTree = "<group>"; };
 		0F9BF61B232FD16700AA2A50 /* Redpos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redpos-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F9BF61C232FD16800AA2A50 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
@@ -227,6 +231,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		0F8D061A2330FA08009613F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F8D061B2330FA15009613F6 /* RDPPostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0F9BF616232FD07B00AA2A50 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +290,7 @@
 		0F9BF629232FD24B00AA2A50 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0F8D061A2330FA08009613F6 /* Model */,
 				0F9BF630232FD2B100AA2A50 /* Presenter */,
 				0F9BF62E232FD26A00AA2A50 /* Controller */,
 				0F9BF62C232FD26100AA2A50 /* View */,
@@ -350,6 +363,7 @@
 				0F9BF63E232FD3AF00AA2A50 /* RDPViewSetupable.swift */,
 				0F9BF646232FD55A00AA2A50 /* RDPBaseViewController.swift */,
 				0F722FB82330657300ED810C /* RDPStyleManager.swift */,
+				0F722FDF2330F3D900ED810C /* RDPBaseDelegate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -560,6 +574,8 @@
 				0F9BF627232FD16A00AA2A50 /* NSArray+PureLayout.m in Sources */,
 				0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				0F722FCD23306A1900ED810C /* RDPUIColor+Extension.swift in Sources */,
+				0F8D061C2330FA15009613F6 /* RDPPostModel.swift in Sources */,
+				0F722FE02330F3D900ED810C /* RDPBaseDelegate.swift in Sources */,
 				0F9BF63F232FD3AF00AA2A50 /* RDPViewSetupable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

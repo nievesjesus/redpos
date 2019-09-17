@@ -10,6 +10,17 @@ import UIKit
 
 class RMDHomeTableViewCell: UITableViewCell {
 
+    var model: PostModel? {
+        didSet {
+            self.authorLabel.text = model?.data.author
+            self.descriptionLabel.text = model?.data.title
+            
+            if let comments = model?.data.numComments {
+                self.commentsLabel.text = "\(comments) comments"
+            }
+        }
+    }
+
     private lazy var selectedView: UIView = {
         let view = UIView.newAutoLayout()
         view.backgroundColor = RDPStyleManager.Color.softBlue.color().withAlphaComponent(0.5)
@@ -45,7 +56,6 @@ class RMDHomeTableViewCell: UITableViewCell {
 
     private lazy var authorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Jesus Nieves"
         label.numberOfLines = 0
         label.textColor = RDPStyleManager.Color.bluePurple.color()
         label.font = RDPStyleManager.Font.roman.font(size: .medium)
@@ -54,7 +64,6 @@ class RMDHomeTableViewCell: UITableViewCell {
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "asdlka sdl kasjdl aksjd laskdj alkdj alskdj alsdkj alskd"
         label.font = RDPStyleManager.Font.roman.font(size: .xsmall)
         label.numberOfLines = 0
         label.textColor = RDPStyleManager.Color.regularGray.color()
@@ -63,7 +72,6 @@ class RMDHomeTableViewCell: UITableViewCell {
     
     private lazy var unreadLabel: UILabel = {
         let label = UILabel()
-        label.text = "Unreaded"
         label.font = RDPStyleManager.Font.roman.font(size: .tiny)
         label.numberOfLines = 0
         label.backgroundColor = RDPStyleManager.Color.softBlue.color()
@@ -77,9 +85,9 @@ class RMDHomeTableViewCell: UITableViewCell {
     
     private lazy var commentsLabel: UILabel = {
         let label = UILabel()
-        label.text = "5k comments"
-        label.numberOfLines = 0
+        label.numberOfLines = 1
         label.textColor = RDPStyleManager.Color.regularGray.color()
+        label.autoSetDimension(.height, toSize: 15)
         label.font = RDPStyleManager.Font.roman.font(size: .xsmall)
         return label
     }()
@@ -87,7 +95,6 @@ class RMDHomeTableViewCell: UITableViewCell {
     
     private lazy var timeLabel: UILabel = {
         let label = UILabel()
-        label.text = "7 hours ago"
         label.numberOfLines = 0
         label.textColor = RDPStyleManager.Color.regularGray.color()
         label.font = RDPStyleManager.Font.roman.font(size: .tiny)
@@ -130,7 +137,7 @@ extension RMDHomeTableViewCell: RDPViewSetupable {
         self.authorLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 23)
         self.authorLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
         
-        self.commentsLabel.autoPinEdge(.top, to: .bottom, of: self.authorLabel, withOffset: 2)
+        self.commentsLabel.autoPinEdge(.top, to: .bottom, of: self.authorLabel, withOffset: 4)
         self.commentsLabel.autoPinEdge(.leading, to: .trailing, of: self.postThumbImageView, withOffset: 12)
         self.commentsLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 16)
         

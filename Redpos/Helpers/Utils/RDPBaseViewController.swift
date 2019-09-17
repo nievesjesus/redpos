@@ -11,7 +11,7 @@ import UIKit
 class RDPBaseViewController: UIViewController {
     
     weak var coordinator: RDPAppCoordinator?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

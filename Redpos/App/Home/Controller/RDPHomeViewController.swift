@@ -11,11 +11,13 @@ import UIKit
 class RDPHomeViewController: RDPBaseViewController {
     
     let homeView = RDPHomeView()
+    private lazy var presenter = RDPHomePresenter(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
         self.setupConstraints()
+        self.presenter.getLastestPost()
     }
     
 }
@@ -43,6 +45,7 @@ extension RDPHomeViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RMDHomeTableViewCell.idCell, for: indexPath) as? RMDHomeTableViewCell else {
             return UITableViewCell()
         }
+        cell.model = self.presenter.getRowAt(indexPath.row)
         return cell
     }
     
@@ -51,7 +54,20 @@ extension RDPHomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.presenter.getNumberOfRows()
     }
     
+}
+
+extension RDPHomeViewController: HomeDelegate {
+    
+    func willBuildPostList() {
+        DispatchQueue.main.async {
+            self.homeView.tableView.reloadData()
+        }
+    }
+    
+    func onRetry() {
+        
+    }
 }

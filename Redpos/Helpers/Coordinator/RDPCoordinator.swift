@@ -11,6 +11,5 @@ import UIKit
 protocol RDPCoordinator {
     var navigationController: UINavigationController { get set }
     var splitViewController: UISplitViewController { get set }
-    
     func start()
 }
