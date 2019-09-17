@@ -144,7 +144,11 @@ extension RMDHomeTableViewCell: RDPViewSetupable {
 
     func setupConstraints() {
         self.containerView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(all: 16))
-        self.postThumbImageView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 19, left: 16, bottom: 19, right: 0), excludingEdge: .trailing)
+        self.postThumbImageView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 19,
+                                                                                left: 16,
+                                                                                bottom: 19,
+                                                                                right: 0),
+                                                             excludingEdge: .trailing)
 
         self.authorLabel.autoPinEdge(.leading, to: .trailing, of: self.postThumbImageView, withOffset: 12)
         self.authorLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 23)

@@ -86,7 +86,11 @@ extension RDPErrorView: RDPViewSetupable {
         self.retryLabel.autoPinEdge(toSuperviewEdge: .leading, withInset: 57.0)
         self.retryLabel.autoPinEdge(.bottom, to: .top, of: self.retryButton, withOffset: -13.0)
 
-        self.retryButton.autoPinEdgesToSuperviewSafeArea(with: UIEdgeInsets(top: 14.0, left: 57.0, bottom: 12.0, right: 57.0), excludingEdge: .top)
+        self.retryButton.autoPinEdgesToSuperviewSafeArea(with: UIEdgeInsets(top: 14.0,
+                                                                            left: 57.0,
+                                                                            bottom: 12.0,
+                                                                            right: 57.0),
+                                                         excludingEdge: .top)
     }
 
 }
@@ -94,9 +98,9 @@ extension RDPErrorView: RDPViewSetupable {
 extension RDPErrorView {
 
     @objc func retryPressed () {
-        guard let cb = onRetryPressed else { return }
+        guard let callback = onRetryPressed else { return }
         self.removeFromSuperview()
-        cb()
+        callback()
     }
 
 }

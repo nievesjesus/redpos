@@ -12,7 +12,9 @@ struct RedposRequest<Model: Codable> {
 
     typealias SuccessCompletionHandler = (_ response: Model) -> Void
 
-    static func request(path: String, delegate: RDPBaseDelegate, url: String, success successCallback: @escaping SuccessCompletionHandler) {
+    static func request(path: String, delegate: RDPBaseDelegate?,
+                        url: String,
+                        success successCallback: @escaping SuccessCompletionHandler) {
 
         var dataTask: URLSessionDataTask?
         let defaultSession = URLSession(configuration: .default)
@@ -29,7 +31,7 @@ struct RedposRequest<Model: Codable> {
                         dataTask = nil
                     }
                     if let error = error {
-                        delegate.showError()
+                        delegate?.showError()
                     } else if
 
                         let data = data,
@@ -39,17 +41,18 @@ struct RedposRequest<Model: Codable> {
                                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
 
                                 if let dictAtPath = json?.value(forKeyPath: path) {
-                                    let jsonData = try JSONSerialization.data(withJSONObject: dictAtPath, options: .prettyPrinted)
+                                    let jsonData = try JSONSerialization.data(withJSONObject: dictAtPath,
+                                                                              options: .prettyPrinted)
                                     let decoder = JSONDecoder()
                                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                                     let model =  try decoder.decode(Model.self, from: jsonData)
                                     successCallback(model)
                                 } else {
-                                    delegate.showError()
+                                    delegate?.showError()
                                 }
 
                             } catch {
-                                delegate.showError()
+                                delegate?.showError()
                             }
                         }
             }

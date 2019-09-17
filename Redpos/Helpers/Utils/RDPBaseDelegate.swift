@@ -6,7 +6,7 @@
 //  Copyright © 2019 Jesus Nieves. All rights reserved.
 //
 
-protocol RDPBaseDelegate {
+protocol RDPBaseDelegate: class {
     func showError()
     func onRetry()
 }

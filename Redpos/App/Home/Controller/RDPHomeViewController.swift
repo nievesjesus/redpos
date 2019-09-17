@@ -53,7 +53,8 @@ extension RDPHomeViewController: HomeViewDelegate {
 extension RDPHomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: RMDHomeTableViewCell.idCell, for: indexPath) as? RMDHomeTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RMDHomeTableViewCell.idCell,
+                                                       for: indexPath) as? RMDHomeTableViewCell else {
             return UITableViewCell()
         }
         cell.model = self.presenter.getRowAt(indexPath.row)

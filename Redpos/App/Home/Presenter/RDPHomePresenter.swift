@@ -10,7 +10,7 @@ import Foundation
 
 class RDPHomePresenter {
 
-    private var delegate: HomeDelegate
+    private weak var delegate: HomeDelegate?
     private var postsList: [PostModel]?
 
     init(delegate: HomeDelegate) {
@@ -18,9 +18,12 @@ class RDPHomePresenter {
     }
 
     func getLastestPost() {
-        RedposRequest<[PostModel]>.request(path: "data.children", delegate: self.delegate, url: "https://www.reddit.com/top.json?limit=50") { (response) in
-            self.postsList = response
-            self.delegate.willBuildPostList()
+        RedposRequest<[PostModel]>
+            .request(path: "data.children",
+                     delegate: self.delegate,
+                     url: "https://www.reddit.com/top.json?limit=50") { (response) in
+                        self.postsList = response
+                        self.delegate?.willBuildPostList()
         }
     }
 
@@ -34,6 +37,6 @@ class RDPHomePresenter {
 
     func setReaded(_ indexPath: Int) {
         self.postsList?[indexPath].data.readed = true
-        self.delegate.willBuildPostList()
+        self.delegate?.willBuildPostList()
     }
 }

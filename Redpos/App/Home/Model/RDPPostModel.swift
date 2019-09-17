@@ -20,6 +20,6 @@ struct DataModel: Codable {
     var readed: Bool? = false
 }
 
-protocol HomeDelegate: RDPBaseDelegate {
+protocol HomeDelegate: class, RDPBaseDelegate {
     func willBuildPostList()
 }
