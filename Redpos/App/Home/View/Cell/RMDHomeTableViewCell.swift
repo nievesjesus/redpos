@@ -24,6 +24,10 @@ class RMDHomeTableViewCell: UITableViewCell {
             } else {
                 self.unreadLabel.isHidden = false
             }
+            
+            if let thumbnail = model?.data.thumbnail {
+                self.postThumbImageView.loadThumbnail(urlSting: thumbnail)
+            }
         }
     }
 
@@ -53,9 +57,10 @@ class RMDHomeTableViewCell: UITableViewCell {
     private lazy var postThumbImageView: UIImageView = {
         let imageview = UIImageView.newAutoLayout()
         imageview.autoSetDimensions(to: CGSize(width: 104, height: 104))
-        imageview.contentMode = .scaleAspectFit
+        imageview.contentMode = .scaleAspectFill
         imageview.backgroundColor = RDPStyleManager.Color.softGray.color()
         imageview.layer.cornerRadius = 52;
+        imageview.clipsToBounds = true
         return imageview
     }()
     

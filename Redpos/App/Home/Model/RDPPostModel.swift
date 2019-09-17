@@ -15,6 +15,7 @@ struct DataModel: Codable {
     let title: String
     let author: String
     let numComments: Int
+    let thumbnail: String
     var readed: Bool? = false
 }
 
