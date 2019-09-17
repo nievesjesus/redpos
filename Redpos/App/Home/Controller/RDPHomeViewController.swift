@@ -69,6 +69,8 @@ extension RDPHomeViewController: HomeDelegate {
     }
     
     func onRetry() {
-        
+        self.errorView?.onRetryPressed = {
+            self.presenter.getLastestPost()
+        }
     }
 }

@@ -18,7 +18,7 @@ class RDPHomePresenter {
     }
 
     func getLastestPost() {
-        RedposRequest<[PostModel]>.request(path: "data.children", delegate: self.delegate, url: "https://www.reddit.com/top.json?limit=50") { (response) in
+        RedposRequest<[PostModel]>.request(path: "sdata.children", delegate: self.delegate, url: "https://www.reddit.com/top.json?limit=50") { (response) in
             self.postsList = response
             self.delegate.willBuildPostList()
         }
