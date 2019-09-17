@@ -18,6 +18,13 @@ class RDPAppCoordinator: RDPCoordinator {
     
     func start() {
         let viewController = RDPHomeViewController()
+        viewController.coordinator = self
         self.navigationController.pushViewController(viewController, animated: false)
+    }
+    
+    func goToDetail(){
+        let viewController = RDPDetailViewController()
+        viewController.coordinator = self
+        self.navigationController.pushViewController(viewController, animated: true)
     }
 }

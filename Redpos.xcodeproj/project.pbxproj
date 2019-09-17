@@ -24,6 +24,7 @@
 		0F722FCB233066E900ED810C /* AvenirLTStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F722FC4233066E900ED810C /* AvenirLTStd-Medium.otf */; };
 		0F722FCD23306A1900ED810C /* RDPUIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */; };
 		0F722FCF23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */; };
+		0F722FD5233086A500ED810C /* RDPUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */; };
 		0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */; };
 		0F9BF625232FD16A00AA2A50 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF61E232FD16800AA2A50 /* NSLayoutConstraint+PureLayout.m */; };
 		0F9BF626232FD16A00AA2A50 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9BF620232FD16800AA2A50 /* ALView+PureLayout.m */; };
@@ -84,6 +85,7 @@
 		0F722FC4233066E900ED810C /* AvenirLTStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Medium.otf"; sourceTree = "<group>"; };
 		0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIColor+Extension.swift"; sourceTree = "<group>"; };
 		0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIEdgeInsets+Extension.swift"; sourceTree = "<group>"; };
+		0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RDPUIView+Extension.swift"; sourceTree = "<group>"; };
 		0F9BF618232FD0D400AA2A50 /* RedposRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedposRequest.swift; sourceTree = "<group>"; };
 		0F9BF61B232FD16700AA2A50 /* Redpos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Redpos-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F9BF61C232FD16800AA2A50 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				0F722FBA233065C100ED810C /* RDPUIFont+Extension.swift */,
 				0F722FCC23306A1900ED810C /* RDPUIColor+Extension.swift */,
 				0F722FCE23306DEA00ED810C /* RDPUIEdgeInsets+Extension.swift */,
+				0F722FD4233086A500ED810C /* RDPUIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				0F9BF645232FD50400AA2A50 /* RDPUITableview+Extension.swift in Sources */,
 				0F9BF64B232FD5AF00AA2A50 /* RDPErrorView.swift in Sources */,
 				0F722FB92330657300ED810C /* RDPStyleManager.swift in Sources */,
+				0F722FD5233086A500ED810C /* RDPUIView+Extension.swift in Sources */,
 				0F9BF632232FD2DE00AA2A50 /* RDPHomeView.swift in Sources */,
 				0F9BF619232FD0D400AA2A50 /* RedposRequest.swift in Sources */,
 				0F9BF63C232FD33000AA2A50 /* RDPDetailView.swift in Sources */,

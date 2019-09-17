@@ -48,6 +48,7 @@ class RMDHomeTableViewCell: UITableViewCell {
         label.text = "Jesus Nieves"
         label.numberOfLines = 0
         label.textColor = RDPStyleManager.Color.bluePurple.color()
+        label.font = RDPStyleManager.Font.roman.font(size: .medium)
         return label
     }()
     
