@@ -80,6 +80,7 @@ class RMDHomeTableViewCell: UITableViewCell {
         label.autoSetDimensions(to: CGSize(width: 62, height: 18))
         label.layer.cornerRadius = 9
         label.clipsToBounds = true
+        label.text = "unreaded"
         return label
     }()
     
