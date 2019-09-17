@@ -29,3 +29,10 @@ extension RDPDetailViewController: RDPViewSetupable {
         self.detailView.autoPinEdgesToSuperviewEdges()
     }
 }
+
+extension RDPDetailViewController {
+
+    func showDetails(model: PostModel?) {
+        self.detailView.model = model
+    }
+}

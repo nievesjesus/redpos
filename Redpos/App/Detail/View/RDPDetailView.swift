@@ -10,13 +10,25 @@ import UIKit
 
 class RDPDetailView: UIView {
 
+    var model: PostModel? {
+        didSet {
+            self.authorLabel.text = model?.data.author
+            self.descriptionLabel.text = model?.data.title
+
+            if let thumbnail = model?.data.thumbnail {
+                self.postThumbImageView.loadThumbnail(urlSting: thumbnail)
+            }
+        }
+    }
+
     private lazy var postThumbImageView: UIImageView = {
         let imageview = UIImageView.newAutoLayout()
         imageview.backgroundColor = RDPStyleManager.Color.softGray.color()
         imageview.autoSetDimensions(to: CGSize(width: 144, height: 144))
-        imageview.contentMode = .scaleAspectFit
+        imageview.contentMode = .scaleAspectFill
         imageview.backgroundColor = RDPStyleManager.Color.softGray.color()
         imageview.layer.cornerRadius = 72
+        imageview.clipsToBounds = true
         return imageview
     }()
 
