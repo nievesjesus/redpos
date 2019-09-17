@@ -32,4 +32,9 @@ class RDPHomePresenter {
     func getRowAt(_ indexPath: Int) -> PostModel? {
         return self.postsList?[indexPath]
     }
+    
+    func setReaded(_ indexPath: Int) {
+        self.postsList?[indexPath].data.readed = true
+        self.delegate.willBuildPostList()
+    }
 }

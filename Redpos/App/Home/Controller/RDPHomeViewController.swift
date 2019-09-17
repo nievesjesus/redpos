@@ -50,6 +50,7 @@ extension RDPHomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.setReaded(indexPath.row)
         self.coordinator?.goToDetail()
     }
     

@@ -18,6 +18,12 @@ class RMDHomeTableViewCell: UITableViewCell {
             if let comments = model?.data.numComments {
                 self.commentsLabel.text = "\(comments) comments"
             }
+            
+            if let readed = model?.data.readed, readed == true {
+                self.unreadLabel.isHidden = true
+            } else {
+                self.unreadLabel.isHidden = false
+            }
         }
     }
 

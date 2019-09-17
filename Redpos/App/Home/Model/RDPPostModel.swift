@@ -8,13 +8,14 @@
 
 struct PostModel: Codable {
     let kind: String
-    let data: DataModel
+    var data: DataModel
 }
 
 struct DataModel: Codable {
     let title: String
     let author: String
     let numComments: Int
+    var readed: Bool? = false
 }
 
 protocol HomeDelegate: RDPBaseDelegate {
