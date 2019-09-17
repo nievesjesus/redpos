@@ -50,4 +50,8 @@ class RDPHomePresenter {
     func removePostAt(_ index: Int) {
         self.postsList?.remove(at: index)
     }
+    
+    func removeAllPost(){
+        self.postsList = [PostModel]()
+    }
 }
