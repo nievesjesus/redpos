@@ -39,4 +39,15 @@ class RDPHomePresenter {
         self.postsList?[indexPath].data.readed = true
         self.delegate?.willBuildPostList()
     }
+    
+    func getModelIndex(_ model: PostModel) -> Int? {
+        guard let index = self.postsList?.firstIndex(where: { (modelElement) -> Bool in
+            modelElement.data.id == model.data.id
+        }) else { return nil }
+        return index
+    }
+    
+    func removePostAt(_ index: Int) {
+        self.postsList?.remove(at: index)
+    }
 }

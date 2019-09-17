@@ -12,6 +12,7 @@ struct PostModel: Codable {
 }
 
 struct DataModel: Codable {
+    let id: String
     let title: String
     let author: String
     let numComments: Int

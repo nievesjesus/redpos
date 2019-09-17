@@ -58,6 +58,7 @@ extension RDPHomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.model = self.presenter.getRowAt(indexPath.row)
+        cell.delegate = self
         return cell
     }
 
@@ -86,4 +87,14 @@ extension RDPHomeViewController: HomeDelegate {
             self.presenter.getLastestPost()
         }
     }
+}
+
+extension RDPHomeViewController: HomeTableViewCellDelegate {
+
+    func willRemovePost(model: PostModel?) {
+        guard let model = model, let index = self.presenter.getModelIndex(model) else { return }
+        self.presenter.removePostAt(index)
+        self.homeView.tableView.reloadSections([0], with: .fade)
+    }
+    
 }

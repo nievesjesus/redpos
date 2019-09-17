@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol HomeTableViewCellDelegate: class {
+    func willRemovePost(model: PostModel?)
+}
+
 class RMDHomeTableViewCell: UITableViewCell {
 
+    weak var delegate: HomeTableViewCellDelegate?
+    
     var model: PostModel? {
         didSet {
             self.authorLabel.text = model?.data.author
@@ -115,6 +121,16 @@ class RMDHomeTableViewCell: UITableViewCell {
         label.font = RDPStyleManager.Font.roman.font(size: .tiny)
         return label
     }()
+    
+    private lazy var removeButton: UIButton = {
+        let button = UIButton()
+        let image = UIImage(named: "trash")
+        button.setImage(image, for: .normal)
+        button.layer.cornerRadius = 24
+        button.autoSetDimensions(to: CGSize(width: 32, height: 32))
+        button.addTarget(self, action: #selector(self.removePost(_:)), for: .touchUpInside)
+        return button
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -140,6 +156,7 @@ extension RMDHomeTableViewCell: RDPViewSetupable {
         self.containerView.addSubview(self.timeLabel)
         self.containerView.addSubview(self.unreadLabel)
         self.containerView.addSubview(self.separatorView)
+        self.containerView.addSubview(self.removeButton)
     }
 
     func setupConstraints() {
@@ -172,7 +189,19 @@ extension RMDHomeTableViewCell: RDPViewSetupable {
         self.separatorView.autoPinEdge(toSuperviewEdge: .trailing)
         self.separatorView.autoPinEdge(toSuperviewEdge: .bottom)
         self.separatorView.autoPinEdge(toSuperviewEdge: .leading, withInset: 40)
+        
+        self.removeButton.autoPinEdge(toSuperviewEdge: .bottom, withInset: 8)
+        self.removeButton.autoPinEdge(toSuperviewEdge: .trailing, withInset: 8)
 
+        
     }
 
+}
+
+private extension RMDHomeTableViewCell {
+    
+    @objc func removePost (_ sender: UIButton){
+        self.delegate?.willRemovePost(model: self.model)
+    }
+    
 }
