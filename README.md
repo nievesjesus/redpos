@@ -35,8 +35,10 @@ Now run the application on the emulator or a physical device and try how easy it
 
 Due to the short time to develop the demo appp in this first stage a hybrid programming pattern between MVP and MVPC is implemented, to achieve a more persistent navigation flow, the app use and app coordinator.
 
-
 ### Preview 
+
+![preview](https://user-images.githubusercontent.com/2607274/65066915-b72de380-d95b-11e9-9ba1-ce32385cd6f6.gif)
+
 
 ![preview](https://user-images.githubusercontent.com/2607274/65066481-ceb89c80-d95a-11e9-984f-1bfc95e29dd2.png)
 

@@ -29,9 +29,13 @@ extension RDPHomeViewController: RDPViewSetupable {
         self.navigationItem.leftBarButtonItem = logoTop
 
         let deletAllImage = UIImage(named: "delete-all-icon")?.withRenderingMode(.alwaysOriginal)
-        let deletaAllButton = UIBarButtonItem(image: deletAllImage, landscapeImagePhone: nil, style: .done, target: self, action: #selector(self.willRemoveAllPost(_:)))
+        let deletaAllButton = UIBarButtonItem(image: deletAllImage,
+                                              landscapeImagePhone: nil,
+                                              style: .done,
+                                              target: self,
+                                              action: #selector(self.willRemoveAllPost(_:)))
         self.navigationItem.rightBarButtonItem = deletaAllButton
-        
+
         self.homeView.delegate = self
         self.homeView.tableView.delegate = self
         self.homeView.tableView.dataSource = self
@@ -100,14 +104,14 @@ extension RDPHomeViewController: HomeTableViewCellDelegate {
         self.presenter.removePostAt(index)
         self.homeView.tableView.reloadSections([0], with: .fade)
     }
-    
+
 }
 
 private extension RDPHomeViewController {
-    
+
     @objc func willRemoveAllPost(_ sender: Any) {
         self.presenter.removeAllPost()
         self.homeView.tableView.reloadSections([0], with: .fade)
     }
-    
+
 }

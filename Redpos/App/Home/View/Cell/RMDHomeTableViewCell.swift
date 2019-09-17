@@ -15,7 +15,7 @@ protocol HomeTableViewCellDelegate: class {
 class RMDHomeTableViewCell: UITableViewCell {
 
     weak var delegate: HomeTableViewCellDelegate?
-    
+
     var model: PostModel? {
         didSet {
             self.authorLabel.text = model?.data.author
@@ -121,7 +121,7 @@ class RMDHomeTableViewCell: UITableViewCell {
         label.font = RDPStyleManager.Font.roman.font(size: .tiny)
         return label
     }()
-    
+
     private lazy var removeButton: UIButton = {
         let button = UIButton()
         let image = UIImage(named: "trash")
@@ -189,19 +189,18 @@ extension RMDHomeTableViewCell: RDPViewSetupable {
         self.separatorView.autoPinEdge(toSuperviewEdge: .trailing)
         self.separatorView.autoPinEdge(toSuperviewEdge: .bottom)
         self.separatorView.autoPinEdge(toSuperviewEdge: .leading, withInset: 40)
-        
+
         self.removeButton.autoPinEdge(toSuperviewEdge: .bottom, withInset: 8)
         self.removeButton.autoPinEdge(toSuperviewEdge: .trailing, withInset: 8)
 
-        
     }
 
 }
 
 private extension RMDHomeTableViewCell {
-    
-    @objc func removePost (_ sender: UIButton){
+
+    @objc func removePost (_ sender: UIButton) {
         self.delegate?.willRemovePost(model: self.model)
     }
-    
+
 }
