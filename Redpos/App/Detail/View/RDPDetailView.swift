@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol DetailViewDelegate: class {
+    func savePhotoFailed(error: Error)
+    func savePhotoSuccess()
+}
+
 class RDPDetailView: UIView {
 
+    weak var delegate: DetailViewDelegate?
+    
     var model: PostModel? {
         didSet {
             self.authorLabel.text = model?.data.author
@@ -80,6 +87,10 @@ extension RDPDetailView: RDPViewSetupable {
         self.addSubview(self.contentView)
         self.contentView.addSubview(self.authorLabel)
         self.contentView.addSubview(self.descriptionLabel)
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        self.postThumbImageView.isUserInteractionEnabled = true
+        self.postThumbImageView.addGestureRecognizer(tapGestureRecognizer)
     }
 
     func setupConstraints() {
@@ -98,3 +109,23 @@ extension RDPDetailView: RDPViewSetupable {
     }
 
 }
+
+private extension RDPDetailView {
+
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        guard let image = tappedImage.image else { return }
+        UIImageWriteToSavedPhotosAlbum(image, self
+            , #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            self.delegate?.savePhotoFailed(error: error)
+        } else {
+            self.delegate?.savePhotoSuccess()
+        }
+    }
+}
+

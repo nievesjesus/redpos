@@ -27,6 +27,7 @@ class RDPHomeView: UIView {
         table.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         table.addSubview(self.refreshControl)
         self.refreshControl.addTarget(self, action: #selector(didPullRefresh(_:)), for: .valueChanged)
+        self.refreshControl.beginRefreshing()
         return table
     }()
 

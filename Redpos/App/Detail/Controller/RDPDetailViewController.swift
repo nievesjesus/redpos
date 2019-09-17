@@ -22,12 +22,29 @@ class RDPDetailViewController: RDPBaseViewController {
 extension RDPDetailViewController: RDPViewSetupable {
 
     func setupView () {
+        self.detailView.delegate = self
         self.view.addSubview(self.detailView)
     }
 
     func setupConstraints() {
         self.detailView.autoPinEdgesToSuperviewEdges()
     }
+}
+
+extension RDPDetailViewController: DetailViewDelegate {
+    func savePhotoFailed(error: Error) {
+        let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(ac, animated: true)
+    }
+    
+    func savePhotoSuccess() {
+        let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    
 }
 
 extension RDPDetailViewController {

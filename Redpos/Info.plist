@@ -44,6 +44,8 @@
 		<string>AvenirLTStd-Oblique.otf</string>
 		<string>AvenirLTStd-Roman.otf</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Redpos need access to your gallery</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
