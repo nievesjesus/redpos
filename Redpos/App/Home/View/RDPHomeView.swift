@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol HomeViewDelegate: class {
+    func willPullRefresh()
+}
+
 class RDPHomeView: UIView {
+    
+    let refreshControl = UIRefreshControl()
+    weak var delegate: HomeViewDelegate?
     
     lazy var tableView: UITableView = {
         let table = UITableView.newAutoLayout()
@@ -18,6 +25,8 @@ class RDPHomeView: UIView {
         table.estimatedRowHeight = 84
         table.backgroundColor = .clear
         table.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        table.addSubview(self.refreshControl)
+        self.refreshControl.addTarget(self, action: #selector(didPullRefresh(_:)), for: .valueChanged)
         return table
     }()
     
@@ -42,6 +51,14 @@ extension RDPHomeView: RDPViewSetupable {
     
     func setupConstraints() {
         self.tableView.autoPinEdgesToSuperviewEdges()
+    }
+    
+}
+
+private extension RDPHomeView {
+    
+    @objc func didPullRefresh(_ sender: Any) {
+        self.delegate?.willPullRefresh()
     }
     
 }

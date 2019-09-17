@@ -28,13 +28,24 @@ extension RDPHomeViewController: RDPViewSetupable {
         let logoTop = UIBarButtonItem(image: image, landscapeImagePhone: nil, style: .done, target: self, action: nil)
         self.navigationItem.leftBarButtonItems = [logoTop   ]
         
+        self.homeView.delegate = self
         self.homeView.tableView.delegate = self
         self.homeView.tableView.dataSource = self
+        
         self.view.addSubview(self.homeView)
     }
     
     func setupConstraints() {
         self.homeView.autoPinEdgesToSuperviewEdges()
+    }
+
+}
+
+extension RDPHomeViewController: HomeViewDelegate {
+
+    func willPullRefresh() {
+        self.presenter.getLastestPost()
+        
     }
 
 }
@@ -65,6 +76,7 @@ extension RDPHomeViewController: HomeDelegate {
     func willBuildPostList() {
         DispatchQueue.main.async {
             self.homeView.tableView.reloadData()
+            self.homeView.refreshControl.endRefreshing()
         }
     }
     
